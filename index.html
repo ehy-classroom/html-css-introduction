@@ -5,11 +5,35 @@
     <!--Das Head Element enthält Metadaten und Links zu externen Ressourcen-->
     <title>Meine erste Webseite</title>
     <!--Das Title Element definiert den Titel der Webseite, der im Browser-Tab angezeigt wird-->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      span {
+        background: hotpink;
+      }
+
+      span.color-accent {
+        background: rgb(255,0,0);
+      }
+
+      figure {
+        padding: 10px;
+      }
+    </style>
+    <!--Das Style Element definiert CSS Regeln, die nur für dieses Dokument gelten-->
   </head>
   <body>
     <h1>Hallo Welt!</h1>
-    <div style="background: green; color: #fff">
-      <p>
+    <div
+      style="
+        background: green;
+        color: #fff;
+        padding: 1px 20px;
+        padding-bottom: 50px;
+        border-radius: 20px;
+      "
+    >
+      <p class="color-accent">
         Dies ist ein Beispielabsatz mit Blindtext, der nur als Platzhalter dient
         .
       </p>
@@ -20,21 +44,25 @@
       </p>
       <p>
         Der dritte Absatz zeigt, wie mehrere Absätze im Layout platziert werden
-        können. Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle
+        können. <span class="color-accent">Dies ist ein Typoblindtext.</span> An ihm kann man sehen, ob alle
       </p>
     </div>
 
-    <figure>
+    <figure class="color-accent">
       <img
         src="assets/img/building-7300734_1920.jpeg"
         alt="Fotografie eines modernen Veranstaltungsgebäudes an einer Wasserfläche. Im Hintergrund urbane Wohngebäude."
         width="100%"
+        style="border-radius: 20px"
       />
     </figure>
 
     <p>
-      Der dritte Absatz zeigt, wie mehrere Absätze im Layout platziert werden können. <span style="background: green; color: #fff">Dies ist ein Typoblindtext</span>. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie
-      Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+      Der dritte Absatz zeigt, wie mehrere Absätze im Layout platziert werden
+      können.
+      <span class="color-accent" style="color: #fff">Dies ist ein Typoblindtext</span
+      >. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. <span>Manchmal benutzt man Worte</span> wie Hamburgefonts, Rafgenduks oder Handgloves,
+      um Schriften zu testen.
     </p>
   </body>
 </html>
