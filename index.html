@@ -7,32 +7,10 @@
     <!--Das Title Element definiert den Titel der Webseite, der im Browser-Tab angezeigt wird-->
     <link rel="stylesheet" href="style.css">
 
-    <style>
-      span {
-        background: hotpink;
-      }
-
-      span.color-accent {
-        background: rgb(255,0,0);
-      }
-
-      figure {
-        padding: 10px;
-      }
-    </style>
-    <!--Das Style Element definiert CSS Regeln, die nur für dieses Dokument gelten-->
   </head>
   <body>
     <h1>Hallo Welt!</h1>
-    <div
-      style="
-        background: green;
-        color: #fff;
-        padding: 1px 20px;
-        padding-bottom: 50px;
-        border-radius: 20px;
-      "
-    >
+    <header>
       <p class="color-accent">
         Dies ist ein Beispielabsatz mit Blindtext, der nur als Platzhalter dient
         .
@@ -46,21 +24,40 @@
         Der dritte Absatz zeigt, wie mehrere Absätze im Layout platziert werden
         können. <span class="color-accent">Dies ist ein Typoblindtext.</span> An ihm kann man sehen, ob alle
       </p>
-    </div>
+    </header>
 
-    <figure class="color-accent">
+    <figure id="img-01" class="color-accent img-01">
       <img
         src="assets/img/building-7300734_1920.jpeg"
         alt="Fotografie eines modernen Veranstaltungsgebäudes an einer Wasserfläche. Im Hintergrund urbane Wohngebäude."
         width="100%"
-        style="border-radius: 20px"
       />
+      <figcaption>Ein modernes Veranstaltungsgebäude an einer Wasserfläche.</figcaption>
+    </figure>
+
+    <figure id="img-02" class="color-accent img-02">
+      <img
+        src="assets/img/building-7515153_1920.jpeg"
+        alt="Fotografie einer Holzfassade an einem modernen Gebäude."
+        width="100%"
+      />
+      <figcaption>Eine Holzfassade an einem modernen Gebäude.</figcaption>
+    </figure>
+
+    <figure id="img-03" class="color-accent img-03">
+      <img
+        src="assets/img/colors-2004497_1920.jpeg"
+        alt="Eine farbige, moderne Fassade mit geschwungener Dachkante."
+        width="100%"
+      />
+      <figcaption>Eine farbige, moderne Fassade mit geschwungener Dachkante.</figcaption>
+    </figure>
     </figure>
 
     <p>
       Der dritte Absatz zeigt, wie mehrere Absätze im Layout platziert werden
       können.
-      <span class="color-accent" style="color: #fff">Dies ist ein Typoblindtext</span
+      <span class="color-accent">Dies ist ein Typoblindtext</span
       >. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. <span>Manchmal benutzt man Worte</span> wie Hamburgefonts, Rafgenduks oder Handgloves,
       um Schriften zu testen.
     </p>
