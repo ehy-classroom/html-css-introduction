@@ -1,0 +1,14 @@
+        
+
+body {
+    background: #bbb;
+}
+
+
+#header {
+            background: #999;
+            color: #222;
+            padding: 10px;
+            border-radius: 24px 24px 0 0;
+            font-size: 1.5em;
+        }
