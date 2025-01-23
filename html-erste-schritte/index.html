@@ -14,10 +14,16 @@
 Die Verlinkung von HTML Dateien ist ein entscheidendes Grundkonzept von HTML. Sie erfolgt über die Anwendung des Elemts/Tags A <a></a>. Wichtig ist hierbei, dass dieses Element ein Attribut namens HREF besitzt, dessen Wert die Zieldatei enthält (siehe oben).
 -->
 
-    <div id="header" style="background:grey;color:white;padding:10px">
-        <h1>Willkommen!</h1>
+    <div id="header" style="
+       background:grey;
+       color:orange;
+       padding:10px;
+       border-radius: 24px 24px 0 0;
+       font-size: 1.5em;
+       ">
+        <h1 style="font-size: 2rem;">Willkommen!</h1>
 
-        <p>
+        <p style="color:white;">
             Auf dieser kleinen Website, versuchen wir die Grundlagen von HTML/CSS zu lernen und zu verstehen. Wer tiefer gehen möchte, kann das auf vielen guten Website im Netz tun. Ein Beispiel: <a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Entstehung_und_Entwicklung" target="_blank">SelfHTML</a>.
 
             <!--
@@ -40,13 +46,16 @@ Die Verlinkung von HTML Dateien ist ein entscheidendes Grundkonzept von HTML. Si
 
             <h2>Galerie mit Cards</h2>
 
-            <p>
-                Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
-            </p>
-            <p>
-                Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus. Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 § ab dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245 € oder 368 $ bestraft.
-            </p>
+            <div id="gallery" style="
+            text-align: center;
+            ">
+                <img src="img/apple-1702316_1920.jpg" width="100%" height="auto">
 
+                <img src="img/salmon-518032_1920.jpg" width="100%" height="auto">
+
+                <img src="img/vegetable-skewer-3317060_1920.jpg" width="100%" height="auto">
+            </div>
+            <!--#gallery-->
         </div>
         <!--#main-->
 
