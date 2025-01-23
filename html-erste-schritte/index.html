@@ -8,7 +8,6 @@
 
 
     <style>
-        
         #header {
             /*background: grey;*/
 
@@ -29,7 +28,7 @@
 Die Verlinkung von HTML Dateien ist ein entscheidendes Grundkonzept von HTML. Sie erfolgt über die Anwendung des Elemts/Tags A <a></a>. Wichtig ist hierbei, dass dieses Element ein Attribut namens HREF besitzt, dessen Wert die Zieldatei enthält (siehe oben).
 -->
 
-    <div id="header">
+    <header id="header">
         <h1 style="font-size: 2rem;">Willkommen!</h1>
 
         <p style="color:white;">
@@ -39,56 +38,64 @@ Die Verlinkung von HTML Dateien ist ein entscheidendes Grundkonzept von HTML. Si
         Das Attribut TARGET eines Hyperlinks ermöglicht, zu steuern, ob das im Hyperlink definierte Ziel sich in einem neuen Fenster oder Reiter öffnet, oder im selben Fenster, wie unsere Site.
         -->
         </p>
-    </div>
+    </header>
     <!--#header-->
 
-    <div id="nav" style="background:#aaa;color:white;padding:10px">
+    <nav id="main-nav" style="background:#aaa;color:white;padding:10px">
         <p>
             Startseite | <a href="text-headings.html">Text & Überschriften</a>
         </p>
-    </div>
+    </nav>
     <!--#nav-->
 
     <div id="wrapper">
 
-        <div id="main">
+        <main>
 
             <h2>Galerie mit Bildern</h2>
 
             <div id="gallery" style="
             text-align: center;
             ">
-                <img src="img/apple-1702316_1920.jpg" width="100%" height="auto">
+                <figure>
+                    <img src="img/apple-1702316_1920.jpg">
+                </figure>
 
-                <img src="img/salmon-518032_1920.jpg" width="100%" height="auto">
+                <figure>
+                    <img src="img/salmon-518032_1920.jpg">
+                </figure>
 
-                <img src="img/vegetable-skewer-3317060_1920.jpg" width="100%" height="auto">
+                <figure>
+                    <img src="img/vegetable-skewer-3317060_1920.jpg">
+                </figure>
+
             </div>
             <!--#gallery-->
-        </div>
+        </main>
         <!--#main-->
 
 
-        <div id="aside">
+        <aside id="sidebar">
             <h2>Weiterführender Inhalt</h2>
 
+            <img src="img/lime-2481346_1920.jpg">
 
             <p>
                 Genauso wichtig in sind mittlerweile auch Âçcèñtë, die in neueren Schriften aber fast immer enthalten sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalitäten. Je nach Software und Voreinstellungen können eingebaute Kapitälchen, Kerning oder Ligaturen (sehr pfiffig) nicht richtig dargestellt werden. Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
             </p>
-        </div>
+        </aside>
         <!--#aside-->
     </div>
     <!--#wrapper-->
 
 
-    <div id="footer" style="background:#555;color:white;padding:10px">
+    <footer id="main-footer" style="background:#555;color:white;padding:10px">
 
         <p>
             Copyright &copy; 2025 Enno Hyttrek
         </p>
 
-    </div>
+    </footer>
     <!--#footer-->
 
 
