@@ -3,155 +3,76 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Willkommen | Meine erste Website</title>
-    <link rel="stylesheet" href="style.css">
-
-
-    <style>
-        #header {
-            /*background: grey;*/
-
-            padding: 10px;
-            border-radius: 24px 24px 0 0;
-            font-size: 1.5em;
-        }
-
-    </style>
-
+    <title>Meine erste Website</title>
 </head>
 
 <body>
 
-
-
     <!--
-Die Verlinkung von HTML Dateien ist ein entscheidendes Grundkonzept von HTML. Sie erfolgt über die Anwendung des Elemts/Tags A <a></a>. Wichtig ist hierbei, dass dieses Element ein Attribut namens HREF besitzt, dessen Wert die Zieldatei enthält (siehe oben).
--->
+    Der BODY ist der Bereich einer HTML Seite, in dem die Elemente stehen, die nachher auf der Website auch sichtbar sind. Im Gegensatz dazu stehen im HEAD Metainformationen, die meist nicht direkt sichtbar sind (Ausnahme: der TITLE Tag).
+    -->
+    
+    <h1>Hallo Welt!</h1>
 
-    <header id="header">
-        <h1 style="font-size: 2rem;">Willkommen!</h1>
+    <h2>Überschrift 2</h2>
 
-        <p style="color:white;">
-            Auf dieser kleinen Website, versuchen wir die Grundlagen von HTML/CSS zu lernen und zu verstehen. Wer tiefer gehen möchte, kann das auf vielen guten Website im Netz tun. Ein Beispiel: <a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Entstehung_und_Entwicklung" target="_blank">SelfHTML</a>.
+    <h3>Überschrift 3</h3>
 
-            <!--
-        Das Attribut TARGET eines Hyperlinks ermöglicht, zu steuern, ob das im Hyperlink definierte Ziel sich in einem neuen Fenster oder Reiter öffnet, oder im selben Fenster, wie unsere Site.
-        -->
-        </p>
-    </header>
-    <!--#header-->
+    <h4>Überschrift 4</h4>
 
-    <nav id="main-nav" style="background:#aaa;color:white;padding:10px">
-        <p>
-            Startseite | <a href="text-headings.html">Text & Überschriften</a>
-        </p>
-    </nav>
-    <!--#nav-->
+    <h5>Überschrift 5</h5>
 
-    <div id="wrapper">
+    <h6>Überschrift 6</h6>
 
-        <main>
+    <p>
+        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
+    </p>
 
-            <h2>Standard Galerie mit Bildern</h2>
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
 
-            <div class="gallery gallery-standard" style="
-            text-align: center;
-            ">
-                <figure>
-                    <img src="img/apple-1702316_1920.jpg">
-                </figure>
+    <hr>
 
-                <figure>
-                    <img src="img/salmon-518032_1920.jpg">
-                </figure>
+    <h2>Kapitelüberschrift. Thema: Überschriftenhierarchie</h2>
 
-                <figure>
-                    <img src="img/vegetable-skewer-3317060_1920.jpg">
-                </figure>
+    <p>
+        Einleitungsabsatz. Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
+    </p>
 
-                <figure>
-                    <img src="img/apple-1702316_1920.jpg">
-                </figure>
+    <h3>Abschnitt 1: Herleitung</h3>
 
-                <figure>
-                    <img src="img/salmon-518032_1920.jpg">
-                </figure>
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
+    
+    <h3>Abschnitt 2: Hauptargument</h3>
 
-                <figure>
-                    <img src="img/vegetable-skewer-3317060_1920.jpg">
-                </figure>
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
+    
+    <h4>Zwischenüberschrift</h4>
+    
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
+    
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
 
-            </div>
-            <!--.gallery-->
-            
-                        <h2>Masonry Galerie mit Bildern</h2>
+    <h3>Abschnitt 3: Fazit</h3>
 
-            <div class="gallery gallery-masonry" style="
-            text-align: center;
-            ">
-                <figure>
-                    <img src="img/apple-1702316_1920.jpg">
-                </figure>
-
-                <figure>
-                    <img src="img/salmon-518032_1920.jpg">
-                </figure>
-
-                <figure>
-                    <img src="img/vegetable-skewer-3317060_1920.jpg">
-                </figure>
-
-                <figure>
-                    <img src="img/apple-1702316_1920.jpg">
-                </figure>
-
-                <figure>
-                    <img src="img/salmon-518032_1920.jpg">
-                </figure>
-
-                <figure>
-                    <img src="img/vegetable-skewer-3317060_1920.jpg">
-                </figure>
-
-            </div>
-            <!--.gallery-->
-        </main>
-        <!--#main-->
-
-
-        <aside id="sidebar">
-            <h2>Weiterführender Inhalt</h2>
-
-            <figure>
-                <img src="img/lime-2481346_1920.jpg">
-            </figure>
-
-            <p>
-                Genauso wichtig in sind mittlerweile auch Âçcèñtë, die in neueren Schriften aber fast immer enthalten sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalitäten. Je nach Software und Voreinstellungen können eingebaute Kapitälchen, Kerning oder Ligaturen (sehr pfiffig) nicht richtig dargestellt werden. Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
-            </p>
-        </aside>
-        <!--#aside-->
-    </div>
-    <!--#wrapper-->
-
-
-    <footer id="main-footer" style="background:#555;color:white;padding:10px">
-
-        <p>
-            Copyright &copy; 2025 Enno Hyttrek
-        </p>
-
-    </footer>
-    <!--#footer-->
-
-
-
-
-
-
-
-
-
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
+    
+    <h5>Quellen</h5>
+    
+    <p>
+        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+    </p>
 
 </body>
 
