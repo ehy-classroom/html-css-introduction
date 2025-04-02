@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Version: 0.3 
+<!--Version: 0.4 
 Übungsprojekt Bowmayster
 -->
 <html lang="de">
@@ -10,22 +10,32 @@
     <title>Bowmayster Architekturen</title>
 
     <style>
-
-        div {
-            background: grey;
+        header,
+        main,
+        footer {
+            padding: 10px;
             color: white;
-            padding: 20px;
+
         }
 
-        #content {
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: grey;
+        }
+
+        main {
             background: white;
             color: black;
+
         }
 
-        #footer {
+        footer {
             background: black;
         }
-
     </style>
 
 
@@ -33,40 +43,60 @@
 
 <body>
 
-    <div role="banner">
-        <h1>Bowmayster Architekturen</h1>
+    <div class="wrapper">
 
-        <p>
-            Ein fiktives Architekturbüro, das als Übungsrahmen für Webdesign Kurse dient.
-        </p>
+        <header id="main-header">
+            <div class="container">
+                <h1>Bowmayster Architekturen</h1>
+
+                <p>
+                    Ein fiktives Architekturbüro, das als Übungsrahmen für Webdesign Kurse dient.
+                </p>
+            </div>
+        </header>
+
+        <main id="content">
+            <div class="container">
+                <p>
+                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
+                    Manchmal
+                    benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal
+                    Sätze,
+                    die
+                    alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«.
+                </p>
+                <p>
+                    Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in
+                    Typoblindtexte
+                    auch
+                    fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung
+                    in
+                    anderen
+                    Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                </p>
+                <p>
+                    Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach
+                    TypoGb.
+                    204 §
+                    ab
+                    dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245 € oder
+                    368
+                    $
+                    bestraft.
+                </p>
+            </div>
+        </main>
+
+        <footer id="main-footer">
+            <div class="container">
+                <p>
+                    © 2025 Enno Hyttrek
+                </p>
+            </div>
+        </footer>
+
+
     </div>
-
-    <div id="content">
-        <p>
-            Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal
-            benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die
-            alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«.
-        </p>
-        <p>
-            Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
-            fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in
-            anderen
-            Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
-        </p>
-        <p>
-            Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 §
-            ab
-            dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245 € oder 368 $
-            bestraft.
-        </p>
-    </div>
-
-    <div id="footer">
-        <p>
-            © 2025 Enno Hyttrek
-        </p>
-    </div>
-
 
 </body>
 
