@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gutter: 3px;
+
+            --color-boxes: hsl(210, 50%, 90%);
+            --color-background: hsl(210, 50%, 80%);
+            --color-text: hsl(210, 50%, 20%);
+            --color-border: hsl(210, 50%, 70%);
+        }
+
+        section {
+            padding: 1em;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        h2,p {
+            margin-bottom: 1em;
+        }
+
+        .container {
+            padding: 1em;
+            background: var(--color-background);
+        }
+
+        .container div {
+            background: var(--color-boxes);
+            padding: 20px;
+            border: 1px solid var(--color-border);
+        }
+
+        /*
+        Variante 2:
+        Flex pur: Flexbox ohne weitere Einstellungen
+        */
+        #flex-pur .container {
+            display: flex;
+        }
+
+        /*
+        Variante 3:
+        Flex Row Reverse: Elemente in umgekehrter Reihenfolge
+        */
+        #flex-row-reverse .container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        /*
+        Variante 4:
+        Flex Column Reverse: Elemente untereinander anordnen und dabei umkehren
+        */
+        #flex-column .container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        /*
+        Variante 5.1:
+        Flex Space Between: Elemente mit gleichmäßigem Abstand
+        */
+        #flex-space-between .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*
+        Variante 5.2:
+        Flex Space Around: Elemente mit gleichmäßigem Abstand um jedes Element
+        */
+        #flex-space-around .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /*
+        Variante 5.3:
+        Flex Space Evenly: Elemente mit gleichmäßigem Abstand zwischen und um die Elemente
+        */
+        #flex-space-evenly .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /*
+        Variante 6:
+        Flex Center: Elemente ausrichten
+        */
+        #flex-center .container {
+            display: flex;
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: stretch; */
+            /* justify-content: baseline; */
+            /* align-items: baseline; */
+            /* align-items: center; */ 
+            /* align-items: flex-end; */ 
+            height: 300px;
+        }
+
+        /*
+        Variante 7:
+        Flex Equal Width: Elemente nebeneinander mit gleicher Breite
+        */
+        #flex-equal-width .container {
+            display: flex;
+        }
+
+        #flex-equal-width .container div {
+            flex: 1;
+        }
+
+        /*
+        Variante 8:
+        Multi Column: Mehrspaltig
+        */
+        #multi-column .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--gutter); /* Abstand zwischen den Spalten */
+        }
+
+        #multi-column .container div {
+            flex: 0 0 calc((100% / 2) - var(--gutter)); /* Korrekte Breite der Spalten mit Spaltenabstand */
+        }
+    </style>
+</head>
+
+<body>
+    <section id="no-flex">
+        <h2>Variante 1: Normaler Flow ohne Flex</h2>
+        <p>In dieser Variante werden die Elemente im normalen Dokumentenfluss angezeigt. Sie werden untereinander oder nebeneinander dargestellt, abhängig von ihrem Block- oder Inline-Layout.</p>
+        <p>Dies ist die Standarddarstellung ohne Flexbox. Die Positionierung und Abstände der Elemente hängen von den Standard-CSS-Regeln ab.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-pur">
+        <h2>Variante 2: Flex pur</h2>
+        <p>Hier wird Flexbox aktiviert, ohne zusätzliche Einstellungen vorzunehmen. Die Elemente werden in einer Zeile nebeneinander angeordnet.</p>
+        <p>Flexbox sorgt dafür, dass die Elemente flexibel sind und sich an die verfügbare Breite anpassen. Dies ist die Grundlage für alle weiteren Flexbox-Layouts.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-row-reverse">
+        <h2>Variante 3: Flex Row Reverse</h2>
+        <p>In dieser Variante werden die Elemente in umgekehrter Reihenfolge angezeigt. Das erste Element wird am rechten Rand positioniert, das letzte am linken Rand.</p>
+        <p>Dies wird durch die Eigenschaft `flex-direction: row-reverse` erreicht. Es ist nützlich, wenn die Reihenfolge der Elemente visuell umgedreht werden soll.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-column">
+        <h2>Variante 4: Flex Column Reverse</h2>
+        <p>Die Elemente werden in einer Spalte untereinander angeordnet, jedoch in umgekehrter Reihenfolge. Das letzte Element wird oben angezeigt, während das erste unten erscheint.</p>
+        <p>Dies wird durch die Eigenschaft `flex-direction: column-reverse` erreicht. Es eignet sich, wenn die Reihenfolge der Inhalte vertikal umgedreht werden soll.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-space-between">
+        <h2>Variante 5.1: Flex Space Between</h2>
+        <p>Die Elemente werden mit gleichmäßigem Abstand zwischen ihnen angeordnet. Der erste und der letzte Abstand zum Rand des Containers sind jedoch null.</p>
+        <p>Dies wird durch die Eigenschaft `justify-content: space-between` erreicht. Es ist ideal, um Elemente gleichmäßig zu verteilen.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-space-around">
+        <h2>Variante 5.2: Flex Space Around</h2>
+        <p>Die Elemente haben gleichmäßige Abstände um sich herum. Der Abstand zwischen den Elementen ist doppelt so groß wie der Abstand zum Rand des Containers.</p>
+        <p>Dies wird durch die Eigenschaft `justify-content: space-around` erreicht. Es sorgt für eine gleichmäßige Verteilung mit Pufferzonen.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-space-evenly">
+        <h2>Variante 5.3: Flex Space Evenly</h2>
+        <p>Die Elemente haben gleichmäßige Abstände zwischen sich und den Rändern des Containers. Der Abstand ist überall gleich groß.</p>
+        <p>Dies wird durch die Eigenschaft `justify-content: space-evenly` erreicht. Es ist nützlich, um eine symmetrische Verteilung zu erzielen.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-center">
+        <h2>Variante 6: Flex Position</h2>
+        <p>In dieser Variante werden verschiedene Möglichkeiten der Positionierung von Elementen innerhalb eines Flex-Containers demonstriert. Die Eigenschaften `justify-content` und `align-items` können verwendet werden, um die Elemente horizontal und vertikal auszurichten.</p>
+        <p>Durch das Ein- oder Auskommentieren der entsprechenden CSS-Zeilen können unterschiedliche Positionierungen wie zentriert, am Anfang, am Ende oder mit gleichmäßigen Abständen gezeigt werden. Dies ist ideal, um die Flexibilität von Flexbox zu veranschaulichen.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="flex-equal-width">
+        <h2>Variante 7: Flex Equal Width</h2>
+        <p>Alle Elemente teilen sich den verfügbaren Platz gleichmäßig. Jedes Element nimmt die gleiche Breite ein, unabhängig von seinem Inhalt.</p>
+        <p>Dies wird durch die Eigenschaft `flex: 1` erreicht. Es eignet sich für Layouts, bei denen alle Elemente gleich wichtig sind.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+
+    <section id="multi-column">
+        <h2>Variante 8: Mehrspaltig</h2>
+        <p>Die Elemente werden in mehreren Spalten angeordnet. Wenn der Platz nicht ausreicht, werden sie in die nächste Zeile verschoben.</p>
+        <p>Dies wird durch die Kombination von `flex-wrap: wrap` und `gap` erreicht. Es ist ideal für responsive Layouts mit mehreren Spalten.</p>
+        <div class="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+    </section>
+</body>
+
+</html>
