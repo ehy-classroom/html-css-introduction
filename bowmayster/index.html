@@ -12,16 +12,20 @@ Version: 0.5
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <style>
-/* 
+        /* 
 Lokales Stylesheet für diese Datei
 */
 
         header,
         main,
         footer {
-            /* padding: 10px; */
+            padding: 10px;
             color: white;
 
+        }
+
+        h1,h2,h3,h4,h5,h6,p {
+            margin-bottom: 1em;
         }
 
         .container {
@@ -41,6 +45,21 @@ Lokales Stylesheet für diese Datei
 
         footer {
             background: black;
+        }
+
+        /*
+BILDGALERIE
+*/
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1em;
+        }
+
+        .gallery figure {
+            width: 33.33%;
+            padding: 5px;
         }
     </style>
 
@@ -64,13 +83,41 @@ Lokales Stylesheet für diese Datei
         <main id="content">
             <div class="container">
 
-                <figure>
-                    <img src="../assets/img/stained-glass-1589648_1920.jpg"
-                        alt="Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen">
-                    <figcaption>
-                        Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen
-                    </figcaption>
-                </figure>
+                <div class="gallery">
+
+                    <figure>
+                        <img src="../assets/img/stained-glass-1589648_1920.jpg"
+                            alt="Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen">
+                        <figcaption>
+                            Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../assets/img/stained-glass-1589648_1920.jpg"
+                            alt="Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen">
+                        <figcaption>
+                            Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../assets/img/stained-glass-1589648_1920.jpg"
+                            alt="Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen">
+                        <figcaption>
+                            Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../assets/img/stained-glass-1589648_1920.jpg"
+                            alt="Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen">
+                        <figcaption>
+                            Fotografie eines kreisförmigen Glasfensters in blauen Grundfarbtönen
+                        </figcaption>
+                    </figure>
+
+                </div>
 
                 <p>
                     Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
